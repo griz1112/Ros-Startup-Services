@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sleep(5)
+/usr/bin/touchscr
+PID=$!
+wait $PID

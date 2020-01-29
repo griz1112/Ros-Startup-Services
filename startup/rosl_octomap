@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source /opt/ros/melodic/setup.bash
+source ~/panther_ws/devel/setup.bash
+export ROS_HOME=/home/griz/.ros
+roslaunch panther_navigation octomap.launch &
+PID=$!
+wait "$PID"
+

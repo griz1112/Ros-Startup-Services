@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source /opt/ros/melodic/setup.bash
+source ~/panther_ws/devel/setup.bash
+export ROS_HOME=/home/griz/.ros
+roslaunch livox_ros_driver livox_lidar.launch &
+roslaunch loam_livox livox-pc.launch &
+PID=$!
+wait "$PID"
+
